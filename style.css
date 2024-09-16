@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+p.meiop {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.imagem {
+  margin: auto;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 200px;
+
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #99e0ff;
+  border-radius: 0px 18px 18px 0px;
+  min-width: 68px;
+  position: relative;
+  transition: min-width 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar.open-sidebar {
+  width: 160px;
+}
+
+.sidebar_content {
+  padding: 12px;
+}
+
+.side_itens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.icon {
+  width: 50px;
+}
+
+.side_item {
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.2s ease; 
+}
+
+.side_item.active {
+  background-color: #2ec0ff; /* Cor do botão ativo */
+}
+
+.side_item:hover {
+  background-color: #70d1fb; /* Cor ao passar o mouse */
+}
+
+.side_item a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.item-description {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.open_btn {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background-color: #2ec0ff;
+  color: black;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar.open-sidebar .item-description {
+  display: inline; /* Mostra o texto quando a sidebar está aberta */
+}
+
+.item-description {
+  display: none; /* Esconde o texto quando a sidebar está fechada */
+}
+
+.sidebar.open-sidebar .item-description {
+  display: inline-block; /* Mostra o texto ao abrir a sidebar */
+}
