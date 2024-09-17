@@ -65,7 +65,7 @@ h3 {
 }
 
 .sidebar.open-sidebar {
-  width: 160px;
+  width: 140px;
 }
 
 .sidebar_content {
@@ -80,7 +80,13 @@ h3 {
 }
 
 .icon {
-  width: 50px;
+  font-size: 14px;
+  margin-bottom: -2px;
+}
+
+.picon {
+  margin-bottom: 8px;
+  height: 16px;
 }
 
 .side_item {
