@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+:root {
+  --cor0: #d1dded;
+  --cor1: #b3d6f9;
+  --cor2: #74aee7;
+  --cor3: #3684db;
+  --cor4: #031930;
+  --fontit: "Great Vibes", cursive;
+  --fontde: "poppins", sans-serif;
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
+  font-family: var(--fontde);
 }
 
 main {
@@ -24,13 +29,17 @@ p {
 
 h1 {
   text-align: center;
-  font-family: "Great Vibes", cursive;
+  font-family: var(--fontit);
   font-size: 50px;
-  min-width: 10vw;
 }
 
 h2 {
   text-align: center;
+  font-size: 40px;
+  font-family: var(--fontit);
+}
+
+h3 {
   text-align: center;
   font-size: 24px;
   margin-top: 10px;
@@ -40,10 +49,52 @@ h2 {
   margin: auto;
   display: block;
   margin-bottom: 40px;
-  margin-top: 30px;
-  max-width: 200px;
+  margin-top: 20px;
+  max-width: 170px;
   width: 30vw;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--cor2);
 }
+
+/*Início Topo*/
+.topo {
+  background-image: linear-gradient(to bottom, #7ab9f8, var(--cor3));
+  height: 90px;
+  padding-top: 22px;
+}
+
+.htopo {
+  color: white;
+  font-size: 53px;
+}
+
+.menu {
+  background-color: var(--cor3);
+  text-align: center;
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+.amenu {
+  color: var(--cor0);
+  background-color: #ffffff09;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  width: 15vw;
+  max-width: 120px;
+  min-width: 80px;
+}
+
+.amenu:hover {
+  background-color: var(--cor1);
+  color: var(--cor4);
+  transition-duration: 0.35s;
+}
+/*Fim Topo*/
 
 /*Inicio Projetos*/
 
@@ -51,12 +102,12 @@ h2 {
   max-width: 400px;
   display: block;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 15px;
   width: 50vw;
 }
 
 .site {
-  background-color: #b3d6f9;
+  background-color: var(--cor1);
   border: none;
   border-radius: 20px 0px 0px 20px;
   margin: auto;
@@ -65,11 +116,11 @@ h2 {
 
 .sitea {
   text-decoration: none;
-  color: #000;
+  color: black;
 }
 
 .arquivos {
-  background-color: #3684db;
+  background-color: var(--cor3);
   border: none;
   border-radius: 0px 20px 20px 0px;
   margin: auto;
@@ -78,7 +129,7 @@ h2 {
 
 .arquivosa {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
 .container {
@@ -100,106 +151,3 @@ h2 {
 }
 
 /*Fim Projetos*/
-/*Início Barra Lateral*/
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #b3d6f9;
-  border-radius: 0px 18px 18px 0px;
-  min-width: 68px;
-  position: relative;
-  transition: min-width 0.3s ease, background-color 0.3s ease;
-}
-
-.sidebar.open-sidebar {
-  width: 140px;
-}
-
-.sidebar_content {
-  padding: 12px;
-}
-
-.side_itens {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
-}
-
-.icon {
-  font-size: 14px;
-  margin-bottom: -2px;
-}
-
-.picon {
-  margin-bottom: 8px;
-  height: 16px;
-}
-
-.side_item {
-  padding: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.2s ease;
-}
-
-.side_item.active {
-  background-color: #3684db;
-}
-
-.iactive {
-  color: #d1dded;
-}
-
-.side_item:hover {
-  background-color: #74aee7;
-}
-
-li:hover i {
-  color: #031930;
-}
-
-li:hover span {
-  color: #031930;
-}
-
-.side_item a {
-  text-decoration: none;
-  color: #000;
-  display: flex;
-  align-items: center;
-}
-
-.item-description {
-  margin-left: 10px;
-  white-space: nowrap;
-}
-
-.open_btn {
-  position: absolute;
-  top: 20px;
-  right: -20px;
-  background-color: #3684db;
-  color: #d1dded;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-}
-
-.sidebar.open-sidebar .item-description {
-  display: inline; /* Mostra o texto quando a sidebar está aberta */
-}
-
-.item-description {
-  display: none; /* Esconde o texto quando a sidebar está fechada */
-}
-
-.sidebar.open-sidebar .item-description {
-  display: inline-block; /* Mostra o texto ao abrir a sidebar */
-}
- /*Fim Barra Lateral*/
