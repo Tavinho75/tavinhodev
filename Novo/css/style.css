@@ -7,7 +7,7 @@
 
 header {
     display: flex;
-    background-color: #6793EE;
+    background-color: #303030;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,6 @@ header {
 }
 
 nav {
-
     display: flex;
 }
 
@@ -25,20 +24,24 @@ ul {
 }
 
 li {
+    background-color: #303030;
     list-style-type: none;
-    background-color: #383838;
     height: 20px;
     width: 60px;
     padding: 10px;
     margin: 2px;
     text-align: center;
     border-radius: 5px;
-    transition: .4s;
     font-size: 17px;
+    transition: background-size 0.3s ease;
+    background-image: linear-gradient(to right, #6793EE 10%, #4961DC 90%);
+    /*background-image: linear-gradient(to bottom, red, yellow);*/
+    background-size: 00% 100%;
+    background-repeat: no-repeat;
 }
 
 li:hover {
-    background-color: #91a3ff;
+    background-size: 100% 100%;
 }
 
 a {
@@ -53,16 +56,104 @@ a {
 }
 
 body {
-    background-color: aqua;
+    background-color: #191919;
     text-align: center;
+    color: white;
 }
 
 .imgme {
     width: 125px;
-    border: 2px blue solid;
+    border: 2px #6793EE solid;
     border-radius: 10px;
+}
+
+.imgproj {
+    width: 350px;
+    border: 2px #9b9b9b solid;
+    border-radius: 10px;
+}
+
+.imgind {
+    width: 80vw;
+    max-width: 800px;
+    border: 2px #9b9b9b solid;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    font-weight: 500;
 }
 
 main {
     margin-top: 50px;
+}
+
+.sitea {
+    text-decoration: none;
+    color: white;
+}
+
+.arquivosa {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    align-items: center;
+    /* Centraliza os botões verticalmente */
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30vw;
+}
+
+.site {
+    border-radius: 20px 0px 0px 20px;
+    background-color: #303030;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.site:hover {
+    background-color: #4961DC;
+}
+
+.arquivos {
+    border-radius: 0px 20px 20px 0px;
+    background-color: #303030;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.arquivos:hover {
+    background-color: #4961DC;
+}
+
+p {
+    margin: auto;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    background-color: aqua;
+    margin-top: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.aproj {
+    color: black;
 }
