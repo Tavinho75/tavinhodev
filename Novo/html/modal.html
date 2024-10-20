@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Projetos</title>
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meus Projetos</h1>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="project-card" data-title="Projeto 1"
+                data-description="
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum vero iure quisquam voluptatibus quibusdam, cum nesciunt, hic facilis reprehenderit aspernatur quidem temporibus id porro nam eius est voluptas. Ullam, eos!"
+                data-image="imagem1.jpg">
+                <img src="../img/favicon.ico" alt="Projeto 1">
+                <h2>Projeto 1</h2>
+                <p>ooo</p>
+            </div>
+            <div class="project-card" data-title="Projeto 2" data-description="Descrição do projeto 2."
+                data-image="imagem2.jpg">
+                <img src="Pilha-de-Alessandro-Volta.jpg" alt="Projeto 2">
+                <h2>Projeto 2</h2>
+                <p>Descrição do projeto 2.</p>
+            </div>
+            <!-- Adicione mais projetos aqui -->
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close"><i class="fa-regular fa-camera-retro"></i></span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
