@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+body {
+    text-align: center;
+}
+
+.sitea {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.modal {
+    background-color: aqua;
+}
+
+.arquivosa {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30vw;
+}
+
+.site {
+    border-radius: 20px 0px 0px 20px;
+    background-color: #303030;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.site:hover {
+    background-color: #4961DC;
+}
+
+.arquivos {
+    border-radius: 0px 20px 20px 0px;
+    background-color: #303030;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.arquivos:hover {
+    background-color: #4961DC;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Todo Do - Fim Modal*/
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+.popup .content {
+    text-align: justify;
+    position: fixed;
+    bottom: 0; /* Inicia na parte de baixo */
+    left: 50%;
+    transform: translateX(-50%) translateY(100%); /* Mantém fora da tela inicialmente */
+    background-color: white;
+    width: 98vw;
+    height: 80vh; /* Ocupa metade da tela */
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out; /* Transição suave ao aparecer */
+    overflow-y: auto; /* Habilita rolagem vertical */
+    max-height: 80vh; /* Limita altura máxima */
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+}
+
+.popup #close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: #303030;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transform: translateX(-50%) translateY(0); /* Move para o meio da tela */
+}
+
+.popup .content::-webkit-scrollbar {
+    width: 0px; /* Remove a barra de rolagem lateral */
+    background: transparent;
+}
