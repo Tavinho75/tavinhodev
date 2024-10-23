@@ -226,3 +226,17 @@ body.modal-open {
 .h1modal {
     color: #4961DC;
 }
+
+input {
+    background-color: white;
+    color: black;
+}
+
+input:active
+input:focus {
+    border: 2px #4961DC solid;
+}
+
+form {
+    margin-top: 50px;
+}
