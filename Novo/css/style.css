@@ -240,3 +240,10 @@ input:focus {
 form {
     margin-top: 50px;
 }
+
+.envio {
+    margin-top: 15px;
+    width: 22vw;
+    background-color: #4961DC;
+    color: white;
+}
