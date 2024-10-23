@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tavinho dev.</title>
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
-    <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="modal-open">
     <header>
         <img src="../img/Logo - Tavinho dev.svg" alt="Tavinho dev. - logo" class="imgheader">
         <nav>
@@ -33,31 +34,29 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="grid">
-            <div class="project-card" data-title="Hinário" data-description="Descrição do projeto" data-image="imagem1.jpg" data-link="https://fonts.google.com/icons?selected=Material+Symbols+Outlined:close:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=close&icon.size=24&icon.color=%23e8eaed">
-                <img src="../img/hinos-ibrfm.png" alt="Projeto 1" class="imgproj">
-                <h2>Hinário</h2>
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div>
+                <span class="material-symbols-outlined" id="close" onclick="togglePopup()">
+                    close
+                </span>
             </div>
-            
+            <h1 class="h1modal">Projeto Hinários</h1>
+            <p class="pmodal">Nesse site tem hinos do Cantor Cristão, da Harpa Cristã, os Salmos e os hinos do HCC</p>
+            <div class="container">
+                <button class="site"><a href="https://hinos-ibrfm.netlify.app/" class="sitea" target="_blank">Ver Site</a></button>
+                <button class="arquivos"><a href="https://github.com/Tavinho75/hinos-ibrfm" class="arquivosa" target="_blank">Ver Arquivos</a></button>
+            </div>
         </div>
-    </main>
-
-    <!-- Modal -->
-<!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="material-symbols-outlined" id="close">
-            close
-        </span>
-        <img id="modal-image" src="" alt="">
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-        <a id="modal-link" href="#" target="_blank" class="modal-link">Visitar o projeto</a>
     </div>
-</div>
 
-    <script src="../js/script.js"></script>
+    <Button onclick="togglePopup()" class="modal">
+        <img src="../img/hinos-ibrfm.png" alt="Projeto Hinários" class="imgproj">
+        <h1>Hinários</h1>
+    </Button>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>

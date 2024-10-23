@@ -75,31 +75,10 @@ body {
     border-radius: 10px;
 }
 
-.imgind {
-    width: 80vw;
-    max-width: 800px;
-    border: 2px #9b9b9b solid;
-    border-radius: 10px;
-}
-
 h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5em;
     font-weight: 500;
-}
-
-main {
-    margin-top: 50px;
-}
-
-.sitea {
-    text-decoration: none;
-    color: white;
-}
-
-.arquivosa {
-    text-decoration: none;
-    color: white;
 }
 
 .container {
@@ -145,114 +124,105 @@ button {
     background-color: #4961DC;
 }
 
-p {
-    margin: auto;
-    width: 150px;
-    padding: 15px;
-    text-align: center;
-    background-color: aqua;
-    margin-top: 5px;
-    border-radius: 20px;
-    font-size: 20px;
+.sitea {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
-.aproj {
-    color: black;
-}
-
-/*Todo Do - Início Modal*/
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Impede a rolagem da tela de fundo */
-    background-color: #3030309d;
-    justify-content: center;
-    align-items: flex-end; /* Alinha o modal ao fundo */
-    opacity: 0; /* Opacidade inicial */
-    transition: opacity 0.3s ease; /* Transição de opacidade */
+    background-color: aqua;
 }
 
-.modal-content {
-    background-color: #fff;
-    width: 90%; /* Largura total */
-    padding: 0px 20px;
-    text-align: justify;
-    max-height: 80%; /* Altura máxima do modal */
-    overflow-y: auto; /* Rolagem vertical se o conteúdo exceder */
-    border-radius: 10px 10px 0 0; /* Bordas arredondadas na parte superior */
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-    transform: translateY(100%); /* Começa fora da tela */
-    transition: transform 0.3s ease; /* Transição suave */
-    /* Adiciona a propriedade para esconder a barra de rolagem */
-    scrollbar-width: none; /* Para Firefox */
-}
-
-.modal-content::-webkit-scrollbar {
-    display: none; /* Para Chrome, Safari e Opera */
-}
-
-.modal.show {
-    display: flex; /* Exibe o modal */
-    opacity: 1; /* Opacidade total */
-}
-
-.modal.show .modal-content {
-    transform: translateY(0); /* Move para a posição original */
-}
-
-/* Estilos do botão de fechar e demais */
-
-#close {
-    color: #000000;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 100%;
-    padding: 10px;
-}
-
-#close:hover,
-#close:focus {
-    color: black;
+.arquivosa {
     text-decoration: none;
-    cursor: pointer;
-}
-
-#modal-title {
-    background-color: #303030;
-    width: 76vw;
-    text-align: center;
-}
-
-#modal-description {
-    background-color: #4961DC;
-    width: 88vw;
-}
-
-#modal-title, #modal-description {
-    color: black;
-    margin: auto;
-    padding: 10px;
-}
-
-.modal-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #6794ee;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.modal-link:hover {
-    background-color: #4961DC;
-}
 
 /*Todo Do - Fim Modal*/
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+.popup .content {
+    text-align: justify;
+    position: fixed;
+    bottom: 0; /* Inicia na parte de baixo */
+    left: 50%;
+    transform: translateX(-50%) translateY(100%); /* Mantém fora da tela inicialmente */
+    background-color: white;
+    width: 98vw;
+    height: 80vh; /* Ocupa metade da tela */
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out; /* Transição suave ao aparecer */
+    overflow-y: auto; /* Habilita rolagem vertical */
+    max-height: 80vh; /* Limita altura máxima */
+    border-radius: 20px 20px 0px 0px;
+}
+
+.popup #close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #303030;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+#close:hover {
+    background-color: #4961DC;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transform: translateX(-50%) translateY(0); /* Move para o meio da tela */
+}
+
+.popup .content::-webkit-scrollbar {
+    width: 0px; /* Remove a barra de rolagem lateral */
+    background: transparent;
+}
+
+.pmodal {
+    background-color: transparent;
+    color: #3a4f7a;
+    width: 70vw;
+    text-align: center;
+}
+
+.h1modal {
+    color: #4961DC;
+}
