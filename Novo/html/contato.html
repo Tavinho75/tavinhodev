@@ -9,6 +9,16 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor89s1Rglp+DeQoEoeGT+q0l/JmFcG664U0z/oBqD7k9V/Y71kYvte2loFA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "nO_OuGvccWZmo1Kkc",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -35,14 +45,40 @@
         </nav>
     </header>
     <main>
-        <form action="mailto:luisotavioreis75@gmail.com" method="post" enctype="text/plain">
-            <h3>Seu Nome:</h3>
-            <input type="text" name="nome">
-            <h3>Seu Email:</h3>
-            <input type="email" name="email">
+        <!--
+        <form action="../enviar-email.php" method="post">
+            <h3>Nome:</h3>
+            <input type="text" name="nome" placeholder="Seu nome:" required>
+            <h3>Email:</h3>
+            <input type="email" name="email" placeholder="exemplo@email.com" required>
+            <label for="telefone">
+                <h3>Telefone:</h3>
+            </label>
+            <input type="text" name="telefone" id="telefone" placeholder="(00) 00000-0000" maxlength="15" required>
+            <h3>Assunto:</h3>
+            <input type="text" name="assunto" placeholder="Assunto:" required>
             <input type="submit" value="Enviar">
         </form>
+-->
+        <form action="contato.php" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone" required><br><br>
+
+            <label for="assunto">Assunto:</label><br>
+            <input type="text" id="assunto" name="assunto" required><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+
     </main>
+    <script src="../mascara.js"></script>
 </body>
 
 </html>

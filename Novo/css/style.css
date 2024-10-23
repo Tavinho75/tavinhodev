@@ -35,7 +35,6 @@ li {
     font-size: 17px;
     transition: background-size 0.3s ease;
     background-image: linear-gradient(to right, #6793EE 10%, #4961DC 90%);
-    /*background-image: linear-gradient(to bottom, red, yellow);*/
     background-size: 00% 100%;
     background-repeat: no-repeat;
 }
