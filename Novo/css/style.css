@@ -70,9 +70,10 @@ body {
 }
 
 .imgproj {
-    width: 350px;
+    width: 300px;
     border: 2px #9b9b9b solid;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -130,7 +131,20 @@ button {
 }
 
 .modal {
-    background-color: aqua;
+    text-align: center;
+    color: white;
+    background-color: #191919;
+    margin-bottom: 25px;
+    margin: auto;
+    width: 300px;
+}
+
+.h1button {
+    width: 300px;
+}
+
+.inimodal {
+    margin-top: 50px;
 }
 
 .arquivosa {
@@ -155,13 +169,12 @@ button {
 main {
     width: 80vw;
     margin: auto;
+    margin-top: 50px;
 }
 
 body.modal-open {
     overflow: hidden;
 }
-
-
 
 .popup .content {
     text-align: justify;
@@ -171,7 +184,7 @@ body.modal-open {
     transform: translateX(-50%) translateY(100%); /* Mantém fora da tela inicialmente */
     background-color: white;
     width: 98vw;
-    height: 80vh; /* Ocupa metade da tela */
+    height: 70vh;
     z-index: 2;
     padding: 20px;
     box-sizing: border-box;
@@ -226,6 +239,8 @@ body.modal-open {
 .h1modal {
     color: #4961DC;
 }
+
+
 
 input {
     background-color: white;

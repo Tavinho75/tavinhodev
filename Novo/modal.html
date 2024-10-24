@@ -1,173 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
-    <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <title>Minha Página de Projetos</title>
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
 </head>
 
-<body class="modal-open">
+<body>
+    <header>
+        <h1>Meus Projetos</h1>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="project-card" data-title="Projeto 1"
+                data-description="
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum vero iure quisquam voluptatibus quibusdam, cum nesciunt, hic facilis reprehenderit aspernatur quidem temporibus id porro nam eius est voluptas. Ullam, eos!"
+                data-image="imagem1.jpg">
+                <img src="img/favicon.ico" alt="Projeto 1">
+                <h2>Projeto 1</h2>
+                <p>ooo</p>
+            </div>
+            <div class="project-card" data-title="Projeto 2" data-description="Descrição do projeto 2."
+                data-image="imagem2.jpg">
+                <img src="Pilha-de-Alessandro-Volta.jpg" alt="Projeto 2">
+                <h2>Projeto 2</h2>
+                <p>Descrição do projeto 2.</p>
+            </div>
+            <!-- Adicione mais projetos aqui -->
+        </div>
+    </main>
 
-    <div class="popup" id="popup-1">
-        <div class="overlay"></div>
-        <div class="content">
-            <div>
-                <span class="material-symbols-outlined" id="close" onclick="togglePopup()">
-                    close
-                </span>
-            </div>
-            <h1>Modal</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati?
-                veniam.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam asperiores nam modi provident
-                dolorum
-                a fuga error iure explicabo sit sapiente, iusto ipsum amet enim molestiae animi? Hic, repudiandae
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam veritatis voluptatum natus et,
-                dolorem ullam sit quam unde, error eveniet modi voluptatem harum temporibus dolor eaque earum saepe
-                officiis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse recusandae ipsa illo dolorem
-                enim temporibus totam ratione? Nesciunt minus, unde veniam accusantium blanditiis illo sequi atque?
-                Neque, laudantium eum.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae illo eligendi et, cupiditate harum
-                fugiat dicta esse fuga, quasi a reiciendis aperiam cumque rerum quas quibusdam quos iste ad autem?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quia laudantium repellendus ut atque
-                voluptatum sapiente aut dignissimos fugiat nemo fuga nam animi voluptate porro amet vero, illum sit
-                obcaecati? veniam.
-            </p>
-            <div class="container">
-                <button class="site"><a href="https://tavinho75.github.io/hinos-ibrfm" class="sitea">Ver Site</a></button>
-                <button class="arquivos"><a href="https://tavinho75.github.io/hinos-ibrfm" class="arquivosa">Ver Arquivos</a></button>
-            </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close"><i class="fa-regular fa-camera-retro"></i></span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
         </div>
     </div>
 
-    <Button onclick="togglePopup()" class="modal">
-        <img src="img/hinos-ibrfm.png" alt="" style="width:250px;">
-        <h1>Hinários</h1>
-    </Button>
-    <script src="modal.js"></script>
+    <footer>
+        <p>Copyright &copy; 2024</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
