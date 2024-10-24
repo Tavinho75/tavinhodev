@@ -76,10 +76,6 @@ body {
     margin-bottom: 10px;
 }
 
-.imgproj:Active {
-    background-color: transparent;
-}
-
 h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5em;
@@ -143,8 +139,12 @@ button {
     width: 100vw;
 }
 
+.modal:active {
+    background-color: transparente;
+}
+
 .h1button {
-    width: 300px;
+    width: 100vw;
 }
 
 .inimodal {
