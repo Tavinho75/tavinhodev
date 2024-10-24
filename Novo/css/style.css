@@ -145,6 +145,8 @@ button {
 }
 
 .h1button {
+    padding:0px;
+    margin:0px;
     width: 96vw;
 }
 
