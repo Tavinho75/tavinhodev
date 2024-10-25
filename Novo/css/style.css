@@ -12,6 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 110px;
+    width:100vw;
 }
 
 nav {
@@ -136,11 +137,18 @@ button {
     background-color: #191919;
     margin-bottom: 25px;
     margin: auto;
-    width: 300px;
+    width: 100vw;
+}
+
+.modal:active {
+    background-color: transparente;
 }
 
 .h1button {
-    width: 300px;
+    padding:0px;
+background-color: Aqua;
+    margin:0px;
+    width: 96vw;
 }
 
 .inimodal {
