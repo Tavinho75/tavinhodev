@@ -1,18 +1,31 @@
 @charset "UTF-8";
 
+/*todo - Início Geral*/
 * {
     margin: 0px;
     padding: 0px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+/*todo - Fim Geral*/
+
+/*todo - Início Header*/
 header {
     display: flex;
     background-color: #303030;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
-    width:100vw;
+    height: 115px;
+    width: 100vw;
+}
+
+.imgheader {
+    margin-left: 25px;
+    height: 100px;
+    display: flex;
 }
 
 nav {
@@ -21,7 +34,7 @@ nav {
 
 ul {
     display: flex;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 li {
@@ -48,17 +61,20 @@ a {
     color: white;
     text-decoration: none;
 }
+/*todo - Fim Header*/
 
-.imgheader {
-    height: 100px;
-    display: flex;
-    margin-left: 20px;
-}
+/*todo - Início Corpo*/
 
 body {
     background-color: #191919;
     text-align: center;
     color: white;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .imgme {
@@ -83,17 +99,13 @@ h2 {
     font-weight: 500;
 }
 
+
+/*! - Início Botões*/
 .container {
     display: flex;
     justify-content: center;
-    /* Centraliza os botões horizontalmente */
     align-items: center;
-    /* Centraliza os botões verticalmente */
     margin-top: 10px;
-}
-
-.buttons {
-    display: flex;
 }
 
 button {
@@ -102,6 +114,10 @@ button {
     font-size: 16px;
     cursor: pointer;
     width: 30vw;
+}
+
+.buttons {
+    display: flex;
 }
 
 .site {
@@ -115,6 +131,11 @@ button {
     background-color: #4961DC;
 }
 
+.sitea {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 .arquivos {
     border-radius: 0px 20px 20px 0px;
     background-color: #303030;
@@ -126,42 +147,42 @@ button {
     background-color: #4961DC;
 }
 
-.sitea {
+.arquivosa {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.modal {
-    text-align: center;
     color: white;
-    background-color: #191919;
-    margin-bottom: 25px;
-    margin: auto;
-    width: 100vw;
 }
+/*! - Fim Botões*/
 
-.modal:active {
-    background-color: transparente;
+/*! - Início Modal*/
+/*? - Início Botão Modal*/
+.modal {
+    display: flex;
+    flex-direction: column; /* Para que o conteúdo (imagem e h1) fiquem em coluna */
+    align-items: center; /* Centraliza os itens dentro do botão */
+    text-align: center;
+    background-color: #191919;
+    margin: 0 auto 25px auto; /* Centraliza o botão horizontalmente e dá margem inferior */
+    width: 100%; /* O botão ocupará a largura total */
+    max-width: 100vw; /* Limita a largura máxima para evitar estouro na viewport */
 }
 
 .h1button {
-    padding:0px;
-background-color: Aqua;
-    margin:0px;
-    width: 96vw;
+    color: white;
+    width: 100%; /* Use 100% para ocupar todo o espaço do botão */
+    text-align: center; /* Centraliza o texto dentro do h1 */
 }
 
 .inimodal {
     margin-top: 50px;
 }
+/*? - Fim Botão Modal*/
 
-.arquivosa {
-    text-decoration: none;
-    color: white;
+/*? - Início Popup Modal*/
+.modal-open {
+    overflow: hidden;
+    height: 100%; /* Limita a altura para bloquear a rolagem */
 }
 
-
-/*Todo Do - Fim Modal*/
 
 .popup .overlay {
     position: fixed;
@@ -174,31 +195,21 @@ background-color: Aqua;
     display: none;
 }
 
-main {
-    width: 80vw;
-    margin: auto;
-    margin-top: 50px;
-}
-
-body.modal-open {
-    overflow: hidden;
-}
-
 .popup .content {
     text-align: justify;
     position: fixed;
-    bottom: 0; /* Inicia na parte de baixo */
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(100%); /* Mantém fora da tela inicialmente */
+    transform: translateX(-50%) translateY(100%);
     background-color: white;
     width: 98vw;
     height: 70vh;
     z-index: 2;
     padding: 20px;
     box-sizing: border-box;
-    transition: transform 0.5s ease-in-out; /* Transição suave ao aparecer */
-    overflow-y: auto; /* Habilita rolagem vertical */
-    max-height: 80vh; /* Limita altura máxima */
+    transition: transform 0.5s ease-in-out;
+    overflow-y: auto;
+    max-height: 80vh;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -229,11 +240,11 @@ body.modal-open {
 }
 
 .popup.active .content {
-    transform: translateX(-50%) translateY(0); /* Move para o meio da tela */
+    transform: translateX(-50%) translateY(0);
 }
 
 .popup .content::-webkit-scrollbar {
-    width: 0px; /* Remove a barra de rolagem lateral */
+    width: 0px;
     background: transparent;
 }
 
@@ -247,16 +258,16 @@ body.modal-open {
 .h1modal {
     color: #4961DC;
 }
+/*? - Fim Popup Modal*/
+/*! - Fim Modal*/
 
-
-
+/*! - Início Formulário*/
 input {
     background-color: white;
     color: black;
 }
 
-input:active
-input:focus {
+input:active input:focus {
     border: 2px #4961DC solid;
 }
 
@@ -270,3 +281,6 @@ form {
     background-color: #4961DC;
     color: white;
 }
+/*! - Fim Formulário*/
+
+/*todo - Fim Corpo*/

@@ -1,3 +1,4 @@
+document.documentElement.classList.remove("modal-open"); // Remove do <html>
 document.body.classList.remove("modal-open");
 
 function togglePopup0() {
@@ -6,9 +7,11 @@ function togglePopup0() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -19,9 +22,11 @@ function togglePopup1() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -32,9 +37,11 @@ function togglePopup2() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -45,9 +52,11 @@ function togglePopup3() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -58,9 +67,11 @@ function togglePopup4() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -71,9 +82,11 @@ function togglePopup5() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -84,9 +97,11 @@ function togglePopup6() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
@@ -97,9 +112,11 @@ function togglePopup7() {
 
     if (popup.classList.contains("active")) {
         // Adicionar a classe que impede a rolagem quando o modal está ativo
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.add("modal-open");
     } else {
         // Remover a classe para permitir rolagem quando o modal estiver fechado
+        document.documentElement.classList.remove("modal-open"); // Remove do <html>
         document.body.classList.remove("modal-open");
     }
 }
