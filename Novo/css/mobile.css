@@ -40,6 +40,7 @@
     }
 
     input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
 textarea:not(:placeholder-shown) {
         background-color: #ffffff;
         /* Cor de fundo quando o campo tem texto */
