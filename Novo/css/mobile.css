@@ -84,5 +84,6 @@
         resize: vertical;
         /* Permite redimensionar verticalmente */
         width: 70%;
+background-color: white;
     }
 }
