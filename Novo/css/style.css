@@ -9,6 +9,10 @@
 html, body {
     overflow-x: hidden;
 }
+
+.contato {
+    display: none;
+}
 /*todo - Fim Geral*/
 
 /*todo - Início Header*/
@@ -34,7 +38,7 @@ nav {
 
 ul {
     display: flex;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 li {
@@ -75,6 +79,8 @@ main {
     width: 80vw;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 20px;
+    flex: 1;
 }
 
 .imgme {
@@ -260,27 +266,82 @@ button {
 }
 /*? - Fim Popup Modal*/
 /*! - Fim Modal*/
+/*todo - Fim Corpo*/
 
-/*! - Início Formulário*/
+/*todo - Início Footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
 input {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
+    width: 100%;
 }
 
-input:active input:focus {
-    border: 2px #4961DC solid;
+.orçamento {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-form {
-    margin-top: 50px;
+.label {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="email"] {
+    margin-bottom: 20px;
+}
+
+input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown) {
+    background-color: #ffffff;
+    /* Cor de fundo quando o campo tem texto */
 }
 
 .envio {
-    margin-top: 15px;
-    width: 22vw;
-    background-color: #4961DC;
+    margin-top: 10px;
+    width: 48%;
+    background-color: #191919;
     color: white;
+    border: 2px solid #4962dc39;
+    transition: .4s;
 }
-/*! - Fim Formulário*/
 
-/*todo - Fim Corpo*/
+.limpar {
+    margin-top: 5px;
+    width: 48%;
+    background-color: #191919;
+    color: white;
+    border: 2px solid #4962dc39;
+    transition: .4s;
+}
+
+.envio:hover {
+    background-color: #4961DC;
+    border: 2px solid #ffffff52;
+}
+
+.limpar:hover {
+    background-color: #4961DC;
+    border: 2px solid #ffffff52;
+}
+
+textarea {
+    width: 100%;
+    height: auto;
+    resize: vertical;
+}
+
+.divform {
+    display: inline-block;
+}
+
+.divassu {
+    margin-left: 15px;
+}
+/*todo - Fim Footer*/

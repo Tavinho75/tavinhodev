@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br"  class="modal-open">
+<html lang="pt-br" class="modal-open">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("nO_OuGvccWZmo1Kkc"); // Substitua pelo seu User ID do EmailJS
+        })();
+    </script>
 </head>
 
 <body class="modal-open">
@@ -28,10 +34,8 @@
                         Projetos
                     </li>
                 </a>
-                <a href="contato.html">
-                    <li>
-                        Contato
-                    </li>
+                <a href="contato.html" class="contato">
+                    <li>Contato</li>
                 </a>
             </ul>
         </nav>
@@ -260,6 +264,45 @@
     <!--?  Espaço de Divisão-->
     <!--! Fim Modais -->
     <!--?  Espaço de Divisão-->
+    <footer>
+        <h2 class="orçamento">Faça um orçamento conosco</h2>
+        <form id="contact-form">
+            <div class="divform divdados">
+                <label for="nome" class="label">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="email" class="label">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="telefone" class="label">Telefone:</label><br>
+                <input type="text" inputmode="numeric" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                    maxlength="15">
+            </div>
+
+            <div class="divform divassu">
+                <label for="assunto" class="label">Assunto:</label><br>
+                <textarea name="assunto" id="assunto" rows="7"></textarea><br>
+                <input type="submit" value="Enviar" class="envio">
+                <input type="reset" value="Limpar" class="limpar">
+            </div>
+    </footer>
+
+    <script>
+        // Função que envia o e-mail ao submeter o formulário
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+
+            // Parâmetros para o serviço de e-mail
+            const serviceID = 'service_84o48jd'; // Substitua com o seu ID de serviço
+            const templateID = 'template_1v9m61j'; // Substitua pelo ID do seu template
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert('Email enviado com sucesso!');
+                }, (err) => {
+                    alert('Erro ao enviar o email: ' + JSON.stringify(err));
+                });
+        });
+    </script>
+    <script src="js/mascara.js"></script>
     <script src="js/modal.js"></script>
 </body>
 
