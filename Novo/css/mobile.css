@@ -39,7 +39,8 @@
         margin-bottom: 10px;
     }
 
-    input[type="text"]:not(:placeholder-shown) {
+    input[type="text"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
         background-color: #ffffff;
         /* Cor de fundo quando o campo tem texto */
     }
