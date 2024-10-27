@@ -24,6 +24,10 @@
         width: 100%;
     }
 
+li {
+width: 75px
+}
+
     input {
         background-color: rgb(255, 255, 255);
         color: black;
