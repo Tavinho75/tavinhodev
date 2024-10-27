@@ -298,7 +298,8 @@ input[type="email"] {
 }
 
 input[type="text"]:not(:placeholder-shown),
-input[type="email"]:not(:placeholder-shown) {
+input[type="email"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
     background-color: #ffffff;
     /* Cor de fundo quando o campo tem texto */
 }
@@ -335,6 +336,7 @@ textarea {
     width: 100%;
     height: auto;
     resize: vertical;
+background-color: white;
 }
 
 .divform {
