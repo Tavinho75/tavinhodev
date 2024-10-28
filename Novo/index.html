@@ -44,26 +44,29 @@
         <img src="img/me.png" alt="Luis Otavio" class="imgme">
         <h1>Olá! Eu me chamo Luis Otavio</h1>
     </main>
-
     <footer>
-        <h2 class="orçamento">Faça um orçamento conosco</h2>
-        <form id="contact-form">
-            <div class="divform divdados">
-                <label for="nome" class="label">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required><br>
-                <label for="email" class="label">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="telefone" class="label">Telefone:</label><br>
-                <input type="text" inputmode="numeric" id="telefone" name="telefone" placeholder="(00) 00000-0000"
-                    maxlength="15">
-            </div>
-
-            <div class="divform divassu">
+        <section class="footer">
+            <article class="item1">
+                <h2>Faça um orçamento conosco</h2>
+            </article>
+            <article class="item2">
+                <form id="contact-form">
+                    <label for="nome" class="label">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br>
+                    <label for="email" class="label">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="telefone" class="label">Telefone:</label><br>
+                    <input type="text" inputmode="numeric" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                        maxlength="15">
+                </form>
+            </article>
+            <article class="item3">
                 <label for="assunto" class="label">Assunto:</label><br>
                 <textarea name="assunto" id="assunto" rows="7"></textarea><br>
-                <input type="submit" value="Enviar" class="envio">
-                <input type="reset" value="Limpar" class="limpar">
-            </div>
+                <input type="submit" value="Enviar" class="envio btnform">
+                <input type="reset" value="Limpar" class="limpar btnform">
+            </article>
+        </section>
     </footer>
 
     <script>
