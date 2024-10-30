@@ -11,7 +11,8 @@ body {
     overflow-x: hidden;
 }
 
-body, footer {
+body,
+footer {
     margin: 0;
     padding: 0;
 }
@@ -83,9 +84,10 @@ body {
     text-align: center;
     color: white;
     display: flex;
-flex-direction: column;
-min-height: 100vh; /* Altura mínima de toda a viewport */
-margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Altura mínima de toda a viewport */
+    margin: 0;
 }
 
 main {
@@ -94,7 +96,8 @@ main {
     margin-top: 50px;
     margin-bottom: 20px;
     flex: 1;
-    padding-bottom: 20px; /* Ajuste conforme o espaço do footer */
+    padding-bottom: 20px;
+    /* Ajuste conforme o espaço do footer */
 }
 
 .imgme {
@@ -141,35 +144,65 @@ button {
 }
 
 .site {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    border: none;
     border-radius: 20px 0px 0px 20px;
     background-color: #303030;
     text-align: center;
     transition: 0.4s ease;
 }
 
+.site .sitea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+    /* Herdar a cor do botão */
+}
+
 .site:hover {
     background-color: #4961DC;
 }
 
-.sitea {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
 .arquivos {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    border: none;
     border-radius: 0px 20px 20px 0px;
     background-color: #303030;
     text-align: center;
     transition: 0.4s ease;
 }
 
+.arquivos .arquivosa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+    /* Herdar a cor do botão */
+}
+
 .arquivos:hover {
     background-color: #4961DC;
 }
 
-.arquivosa {
-    text-decoration: none;
-    color: white;
+.amodal {
+    color: black;
 }
 
 /*! - Fim Botões*/
@@ -301,35 +334,12 @@ footer {
     width: 100%;
     display: block;
     margin: 0;
-
+    height: 190px;
     padding: 10px;
 }
 
-article > h2 {
+article>h2 {
     font-size: 35px;
-}
-
-.label {
-    font-size: 18px;
-}
-
-input {
-    width: 100%;
-    background-color: white;
-    color: black;
-}
-
-input[type="text"],
-input[type="email"] {
-    margin-bottom: 20px;
-}
-
-input[type="text"]:not(:placeholder-shown),
-#telefone:not(:placeholder-shown),
-input[type="email"]:not(:placeholder-shown),
-textarea:not(:placeholder-shown) {
-    background-color: #ffffff;
-    /* Cor de fundo quando o campo tem texto */
 }
 
 .btnform {
@@ -349,13 +359,6 @@ textarea:not(:placeholder-shown) {
 .limpar:hover {
     background-color: #4961DC;
     border: 2px solid #ffffff52;
-}
-
-textarea {
-    width: 96%;
-    height: auto;
-    resize: vertical;
-    background-color: white;
 }
 
 .footer {
@@ -389,20 +392,59 @@ textarea {
     margin: 5px;
     height: 155px;
 }
-/*todo - Fim Footer*/
 
-input,
+/*! Início - Input e Textarea*/
+.label {
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 2px #191919 solid;
+    transition: .4s;
+}
+
+input[type="text"],
+input[type="email"] {
+    margin-bottom: 20px;
+}
+
+input[type="text"]:not(:placeholder-shown),
+#telefone:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    background-color: #ffffff;
+    /* Cor de fundo quando o campo tem texto */
+}
+
+textarea {
+    width: 96%;
+    height: auto;
+    resize: vertical;
+    background-color: white;
+    border: 2px #191919 solid;
+    transition: .4s;
+}
+
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid rgb(255, 0, 0);
-  -webkit-text-fill-color: rgb(0, 0, 0) !important;
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
-  transition: background-color 5000s ease-in-out 0s;
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #6793EE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*! Fim - Input e Textarea*/
+/*todo - Fim Footer*/
