@@ -1,6 +1,6 @@
 const btn1 = document.getElementById("btnopen1")
 const modal1 = document.getElementById("dialog1")
-const close1 = document.getElementById("close1")
+const close1 = document.querySelector(".close1")
 
 btn1.onclick = function () {
   modal1.showModal()
