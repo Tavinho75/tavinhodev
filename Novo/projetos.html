@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="modal-open">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     </script>
 </head>
 
-<body class="modal-open">
+<body>
     <header>
         <img src="img/Logo - Tavinho dev.png" alt="Tavinho dev. - logo" class="imgheader">
         <nav>
@@ -48,6 +48,11 @@
         <h1>Hinários</h1>
     </button>
     <dialog id="dialog1">
+        <button class="close">
+            <span class="material-symbols-outlined" id="close">
+                close
+            </span>
+        </button>
         <h1 class="h1modal">Projeto Hinários</h1>
         <p class="pmodal">Nesse site tem hinos do Cantor Cristão, da Harpa Cristã, os Salmos e os hinos do HCC
         </p>
@@ -62,21 +67,17 @@
                 Ver Arquivos
             </button>
         </div>
-        <button id="btnclose1">
-            <span class="material-symbols-outlined" id="close">
-                close
-            </span>
+        <button id="closem">
+            <p id="close1">
+                Fechar
+            </p>
         </button>
     </dialog>
 
     <div class="popup" id="popup-0">
         <div class="overlay">
             <div class="content">
-                <div>
-                    <span class="material-symbols-outlined" id="close" onclick="togglePopup0()">
-                        close
-                    </span>
-                </div>
+
                 <h1 class="h1modal">Projeto Hinários</h1>
                 <p class="pmodal">Nesse site tem hinos do Cantor Cristão, da Harpa Cristã, os Salmos e os hinos do HCC
                 </p>
