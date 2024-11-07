@@ -402,7 +402,7 @@ textarea:focus {
     padding-top: 20px;
 }
 
-.close {
+#close {
   cursor: pointer;
   height: 40px;
   width: 40px;
@@ -417,8 +417,12 @@ textarea:focus {
   top: 20px;
 }
 
-.close:hover {
+#close:hover {
     background-color: #6793EE;
+}
+
+span {
+    color: white;
 }
 
 .modal-open {
