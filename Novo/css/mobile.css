@@ -33,7 +33,7 @@
     input {
         background-color: rgb(255, 255, 255);
         color: black;
-        width: 70%;
+        width: 80%;
     }
 
     .label {
@@ -53,12 +53,11 @@
     }
 
     form {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .envio {
         margin-top: 10px;
-        width: 70%;
         background-color: #303030;
         color: white;
         border: 2px solid #4962dc39;
@@ -67,7 +66,6 @@
 
     .limpar {
         margin-top: 5px;
-        width: 70%;
         background-color: #303030;
         color: white;
         border: 2px solid #4962dc39;
@@ -85,13 +83,12 @@
     }
 
     textarea {
-        width: 100%;
+        width: 83%;
         /* Para ocupar toda a largura do contêiner */
         height: auto;
         /* Ajusta a altura de acordo com o conteúdo */
         resize: vertical;
         /* Permite redimensionar verticalmente */
-        width: 70%;
         background-color: white;
     }
     
