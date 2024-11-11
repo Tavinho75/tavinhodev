@@ -276,6 +276,7 @@ footer {
 
 article>h2 {
     font-size: 35px;
+    font-family: 'Great Vibes', cursive;
 }
 
 .btnform {
@@ -317,16 +318,7 @@ article>h2 {
 
 .item2 {
     flex: 1 0 20%;
-    padding-top: 8px;
-    margin: 5px;
     height: 135px;
-}
-
-.item3 {
-    flex: 1 0 20%;
-    padding: 10px;
-    margin: 5px;
-    height: 155px;
 }
 
 /*! Início - Input e Textarea*/
@@ -386,11 +378,11 @@ textarea:focus {
 /*todo - Fim Footer*/
 
 
-#dialog1::backdrop {
-    background-color: rgba(41, 41, 41, 0.852);
+.dialog::backdrop {
+    background-color: rgba(41, 41, 41, 0.664);
 }
 
-#dialog1 {
+.dialog {
     border: none;
     border-radius: .5rem .5rem 0 0;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.644);
@@ -431,4 +423,56 @@ span {
 
 .modal {
     color: white;
+}
+
+
+
+
+.coluna-esquerda {
+    float: left;
+    width: 20%;
+    height: 100px;
+}
+
+.coluna-direita {
+    float: right;
+    width: 20%;
+}
+
+#contact-form {
+    overflow: auto;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+input, textarea {
+    width: 50%;
+    height: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 100%;
+    height: 40px;
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #3e8e41;
 }
