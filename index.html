@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Tavinho dev.</title>
-    <link rel="stylesheet" href="files/style.css" />
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header class="topo">
-      <h1 class="htopo">Tavinho dev.</h1>
-    </header>
-    <nav class="menu">
-      <a href="#" class="amenu">Home</a>
-      <a href="projetos.html" class="amenu">Projetos</a>
-    </nav>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavinho dev.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor89s1Rglp+DeQoEoeGT+q0l/JmFcG664U0z/oBqD7k9V/Y71kYvte2loFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("nO_OuGvccWZmo1Kkc"); // Substitua pelo seu User ID do EmailJS
+        })();
+    </script>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="img/Logo - Tavinho dev.png" alt="Tavinho dev. - logo" class="imgheader">
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>
+                        Home
+                    </li>
+                </a>
+                <a href="projetos.html">
+                    <li>
+                        Projetos
+                    </li>
+                </a>
+                <a href="contato.html" class="contato">
+                    <li>Contato</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
     <main>
-      <img src="imagens/me.png" alt="Luis Otavio" class="imagem" />
-      <p>
-        Meu nome é <b>Luis Otavio</b>, tenho 13 anos e estou me dedicando aos estudos para me tornar um programador web. Este site foi criado por mim mesmo para aprimorar minhas competências de estilização, além de funcionar como um portfólio para mim.
-      </p>
+        <img src="img/me.png" alt="Luis Otavio" class="imgme">
+        <h1>Olá! Eu me chamo Luis Otavio</h1>
     </main>
 
-    <script src="files/script.js"></script>
-  </body>
+    <footer>
+        <section class="footer">
+            <article class="item1">
+                <h2>Faça um orçamento conosco</h2>
+            </article>
+            <article class="item2">
+                <form id="contact-form">
+                    <div class="coluna-esquerda">
+                        <label for="nome" class="label">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="email" class="label">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="telefone" class="label">Telefone:</label>
+                        <input type="text" inputmode="numeric" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                            maxlength="15">
+                    </div>
+                    <div class="coluna-direita">
+                        <label for="assunto" class="label">Assunto:</label>
+                        <textarea name="assunto" id="assunto" rows="7"></textarea><br>
+                        <input type="submit" value="Enviar" class="envio btnform">
+                        <input type="reset" value="Limpar" class="limpar btnform">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </footer>
+
+    <script>
+        // Função que envia o e-mail ao submeter o formulário
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+
+            // Parâmetros para o serviço de e-mail
+            const serviceID = 'service_84o48jd'; // Substitua com o seu ID de serviço
+            const templateID = 'template_1v9m61j'; // Substitua pelo ID do seu template
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert('Email enviado com sucesso!');
+                }, (err) => {
+                    alert('Erro ao enviar o email: ' + JSON.stringify(err));
+                });
+        });
+    </script>
+    <script src="js/mascara.js"></script>
+</body>
+
 </html>
-<!--! <i class="fa-solid fa-user"></i>-->

@@ -9,6 +9,10 @@
         display: inline-block;
     }
 
+    .contato > li {
+        margin: 0;
+    }
+
     header {
         height: 170px;
         justify-content: center;
