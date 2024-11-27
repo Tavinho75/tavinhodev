@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            height: 100vh;
+            padding-top: 60px; /* Para não ficar atrás do menu fixo */
+        }
+        #sec1 { background-color: #f4a261; }
+        #sec2 { background-color: #2a9d8f; }
+        #sec3 { background-color: #264653; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#sec1">Seção 1</a>
+    <a href="#sec2">Seção 2</a>
+    <a href="#sec3">Seção 3</a>
+</nav>
+
+<section id="sec1">
+    <h1>Bem-vindo à Seção 1</h1>
+</section>
+<section id="sec2">
+    <h1>Bem-vindo à Seção 2</h1>
+</section>
+<section id="sec3">
+    <h1>Bem-vindo à Seção 3</h1>
+</section>
+
+<script>
+    // Adiciona um efeito de rolagem suave ao clicar nos links do menu
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

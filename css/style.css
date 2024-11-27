@@ -392,10 +392,13 @@ textarea:focus {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.644);
     width: 90vw;
     height: 80vh;
-    position: absolute;
-    top: 20vh;
-    left: 5vw;
     padding-top: 20px;
+}
+
+.dialog {
+    position: absolute;
+    top: 100vh;
+    left: 5vw;
 }
 
 #close {

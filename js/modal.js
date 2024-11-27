@@ -4,7 +4,6 @@ const btn3 = document.getElementById("btnopen3")
 const btn4 = document.getElementById("btnopen4")
 const btn5 = document.getElementById("btnopen5")
 const btn6 = document.getElementById("btnopen6")
-const btn7 = document.getElementById("btnopen7")
 
 const modal1 = document.getElementById("dialog1")
 const modal2 = document.getElementById("dialog2")
@@ -12,7 +11,6 @@ const modal3 = document.getElementById("dialog3")
 const modal4 = document.getElementById("dialog4")
 const modal5 = document.getElementById("dialog5")
 const modal6 = document.getElementById("dialog6")
-const modal7 = document.getElementById("dialog7")
 
 const closeButtons = document.querySelectorAll(".close");
 
@@ -52,12 +50,6 @@ btn6.onclick = function () {
   document.documentElement.classList.add("modal-open");
 }
 
-btn7.onclick = function () {
-  modal7.showModal()
-  document.body.classList.add("modal-open");
-  document.documentElement.classList.add("modal-open");
-}
-
 closeButtons.forEach((button) => {
   button.onclick = function () {
     modal1.close();
@@ -66,8 +58,23 @@ closeButtons.forEach((button) => {
     modal4.close();
     modal5.close();
     modal6.close();
-    modal7.close();
     document.body.classList.remove("modal-open");
     document.documentElement.classList.remove("modal-open");
   };
 });
+
+function openDialog(btnId, dialogId) {
+    const dialog = document.getElementById(dialogId);
+    dialog.showModal();
+    const btnOpenDialog = document.getElementById(btnId);
+    const offsetTop = btnOpenDialog.offsetTop + btnOpenDialog.offsetHeight;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+}
+
+// Chame a função para cada botão
+document.getElementById('btnopen1').addEventListener('click', () => openDialog('btnopen1', 'dialog1'));
+document.getElementById('btnopen2').addEventListener('click', () => openDialog('btnopen2', 'dialog2'));
+document.getElementById('btnopen3').addEventListener('click', () => openDialog('btnopen3', 'dialog3'));
+document.getElementById('btnopen4').addEventListener('click', () => openDialog('btnopen4', 'dialog4'));
+document.getElementById('btnopen5').addEventListener('click', () => openDialog('btnopen5', 'dialog5'));
+document.getElementById('btnopen6').addEventListener('click', () => openDialog('btnopen6', 'dialog6'));
