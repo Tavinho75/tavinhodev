@@ -62,19 +62,3 @@ closeButtons.forEach((button) => {
     document.documentElement.classList.remove("modal-open");
   };
 });
-
-function openDialog(btnId, dialogId) {
-    const dialog = document.getElementById(dialogId);
-    dialog.showModal();
-    const btnOpenDialog = document.getElementById(btnId);
-    const offsetTop = btnOpenDialog.offsetTop + btnOpenDialog.offsetHeight;
-    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-}
-
-// Chame a função para cada botão
-document.getElementById('btnopen1').addEventListener('click', () => openDialog('btnopen1', 'dialog1'));
-document.getElementById('btnopen2').addEventListener('click', () => openDialog('btnopen2', 'dialog2'));
-document.getElementById('btnopen3').addEventListener('click', () => openDialog('btnopen3', 'dialog3'));
-document.getElementById('btnopen4').addEventListener('click', () => openDialog('btnopen4', 'dialog4'));
-document.getElementById('btnopen5').addEventListener('click', () => openDialog('btnopen5', 'dialog5'));
-document.getElementById('btnopen6').addEventListener('click', () => openDialog('btnopen6', 'dialog6'));

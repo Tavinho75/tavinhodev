@@ -324,24 +324,6 @@ article>h2 {
 }
 
 /*! Início - Input e Textarea*/
-/*
-.label {
-    font-size: 18px;
-}
-
-input {
-    width: 100%;
-    background-color: white;
-    color: black;
-    border: 2px #191919 solid;
-    transition: .4s;
-}
-
-input[type="text"],
-input[type="email"] {
-    margin-bottom: 20px;
-}
-*/
 input[type="text"]:not(:placeholder-shown),
 #telefone:not(:placeholder-shown),
 input[type="email"]:not(:placeholder-shown),
@@ -392,13 +374,10 @@ textarea:focus {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.644);
     width: 90vw;
     height: 80vh;
-    padding-top: 20px;
-}
-
-.dialog {
-    position: absolute;
-    top: 100vh;
+    position: fixed;
+    top: 20vh;
     left: 5vw;
+    padding-top: 20px;
 }
 
 #close {
@@ -445,7 +424,7 @@ span {
 }
 
 #contact-form {
-    height: 155px;
+    height: 160px;
     overflow: auto;
     padding: 0px;
     border-radius: 10px;
