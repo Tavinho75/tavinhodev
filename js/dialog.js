@@ -1,7 +1,6 @@
 const btn1 = document.getElementById("btnopen1")
 const modal1 = document.getElementById("dialog1")
 const close1 = document.getElementById("btnclose1")
-document.body.classList.remove("modal-open");
 
 btn1.onclick = function() {
   modal1.showModal()

@@ -14,13 +14,14 @@
     }
 
     header {
-        height: 170px;
+        height: 165px;
         justify-content: center;
-        align-items: center;
     }
 
     .imgheader {
+        width: 150px;
         margin: 12px;
+        margin-bottom: 0px;
     }
 
     ul {
@@ -30,7 +31,6 @@
 
     li {
         margin-right: 10px;
-        margin: 0;
         margin: 0 10px 0 0;
     }
 
@@ -63,7 +63,7 @@
     }
 
     form {
-        margin-top: 40px;
+        margin-top: 0px;
     }
 
     .envio {
