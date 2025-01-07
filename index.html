@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -19,26 +20,43 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
+<!--!                !-->
+<!--! Menu Hambuguer !-->
+<!--!                !-->
+
 <body>
     <header>
         <img src="img/Logo.svg" alt="Tavinho dev. - logo" class="imgheader">
-        <nav>
+        <div class="navigation menu">
             <ul>
-                <a href="#">
-                    <li>
-                        Home
-                    </li>
-                </a>
-                <a href="projetos.html">
-                    <li>
-                        Projetos
-                    </li>
-                </a>
-                <a href="contato.html" class="contato">
-                    <li>Contato</li>
-                </a>
+                <li class="list active menu">
+                    <a href="#" class="menu">
+                        <span class="icon menu">
+                            <ion-icon name="home-outline" class="menu"></ion-icon>
+                        </span>
+                        <span class="text menu">Home</span>
+                    </a>
+                </li>
+                <li class="list menu">
+                    <a href="#" class="menu">
+                        <span class="icon menu">
+                            <ion-icon name="code-outline" class="menu"></ion-icon>
+                        </span>
+                        <span class="text menu">Projetos</span>
+                    </a>
+                </li>
+                <li class="list menu">
+                    <a href="#" class="menu">
+                        <span class="icon menu">
+                            <ion-icon name="chatbubble-outline" class="menu"></ion-icon>
+                            <!-- ! <ion-icon name="chatbubbles-outline"></ion-icon> -->
+                        </span>
+                        <span class="text menu">Contato</span>
+                    </a>
+                </li>
+                <div class="indicator menu"></div>
             </ul>
-        </nav>
+        </div>
     </header>
     <main>
         <img src="img/me.png" alt="Luis Otavio" class="imgme">
@@ -90,6 +108,10 @@
         });
     </script>
     <script src="js/mascara.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

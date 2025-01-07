@@ -1,37 +1,21 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 510px) {
     footer {
         display: none;
     }
 
-    .contato {
-        display: inline-block;
-    }
-
-    .contato > li {
-        margin: 0;
-    }
-
     header {
-        height: 165px;
-        justify-content: center;
+        height: 130px;
     }
 
     .imgheader {
         width: 150px;
         margin: 12px;
-        margin-bottom: 0px;
     }
 
-    ul {
-        margin-bottom: 5px;
-        width: 100%;
-    }
-
-    li {
-        margin-right: 10px;
-        margin: 0 10px 0 0;
+    .navigation {
+        width: 215px;
     }
 
     input {
@@ -103,7 +87,7 @@
         /* Permite redimensionar verticalmente */
         background-color: white;
     }
-    
+
     #close {
         display: none;
     }
@@ -123,7 +107,7 @@
         margin: auto;
         width: 50%;
     }
-    
+
     #closem span {
         position: absolute;
         top: 0;
@@ -135,7 +119,7 @@
         color: inherit;
         /* Herdar a cor do botão */
     }
-    
+
     #closem:hover {
         background-color: #4961DC;
     }
