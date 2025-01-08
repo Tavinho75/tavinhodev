@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -22,23 +23,36 @@
 <body>
     <header>
         <img src="img/Logo.svg" alt="Tavinho dev. - logo" class="imgheader">
-        <nav>
+        <div class="navigation menu">
             <ul>
-                <a href="index.html">
-                    <li>
-                        Home
-                    </li>
-                </a>
-                <a href="#">
-                    <li>
-                        Projetos
-                    </li>
-                </a>
-                <a href="contato.html" class="contato">
-                    <li>Contato</li>
-                </a>
+                <li class="list menu">
+                    <a href="index.html" class="menu animate">
+                        <span class="icon menu">
+                            <ion-icon name="home-outline" class="menu"></ion-icon>
+                        </span>
+                        <span class="text menu">Home</span>
+                    </a>
+                </li>
+                <li class="list active menu">
+                    <a href="#" class="menu animate">
+                        <span class="icon menu">
+                            <ion-icon name="code-outline" class="menu"></ion-icon>
+                        </span>
+                        <span class="text menu">Projetos</span>
+                    </a>
+                </li>
+                <li class="list menu">
+                    <a href="contato.html" class="menu animate">
+                        <span class="icon menu">
+                            <ion-icon name="chatbubble-outline" class="menu"></ion-icon>
+                            <!-- ! <ion-icon name="chatbubbles-outline"></ion-icon> -->
+                        </span>
+                        <span class="text menu">Contato</span>
+                    </a>
+                </li>
+                <div class="indicator menu"></div>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <!--! Início Modal 1-->
@@ -86,7 +100,9 @@
             </span>
         </button>
         <h1 class="h1modal">João Calvino</h1>
-        <p class="pmodal">Nesse site contém 18 capítulos do livro "<a href="https://www.amazon.com.br/João-Calvino-Era-Assim-vibrante-ebook/dp/B00FJJJSW8" style="color: #6793EE;">João Calvino Era Assim</a>" por Thea B. Van Halsema
+        <p class="pmodal">Nesse site contém 18 capítulos do livro "<a
+                href="https://www.amazon.com.br/João-Calvino-Era-Assim-vibrante-ebook/dp/B00FJJJSW8"
+                style="color: #6793EE;">João Calvino Era Assim</a>" por Thea B. Van Halsema
         </p>
 
         <div class="container">
@@ -152,7 +168,8 @@
             </span>
         </button>
         <h1 class="h1modal">Projeto Social</h1>
-        <p class="pmodal">Nesse site tem um celular com um exemplo de uma rede social que muda de acordo com o botão clicado
+        <p class="pmodal">Nesse site tem um celular com um exemplo de uma rede social que muda de acordo com o botão
+            clicado
         </p>
 
         <div class="container">
@@ -284,6 +301,10 @@
     </script>
     <script src="js/mascara.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
