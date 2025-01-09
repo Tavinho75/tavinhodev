@@ -20,36 +20,31 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
-<!--!                !-->
-<!--! Menu Hambuguer !-->
-<!--!                !-->
-
 <body>
     <header>
         <img src="img/Logo.svg" alt="Tavinho dev. - logo" class="imgheader">
         <div class="navigation menu">
             <ul>
                 <li class="list active menu">
-                    <a href="#" class="menu animate">
+                    <a href="#" class="menu">
                         <span class="icon menu">
-                            <ion-icon name="home-outline" class="menu"></ion-icon>
+                            <ion-icon name="home" class="menu"></ion-icon>
                         </span>
                         <span class="text menu">Home</span>
                     </a>
                 </li>
                 <li class="list menu">
-                    <a href="projetos.html" class="menu animate">
+                    <a href="projetos.html" class="menu"  onclick="atrasarLink(event, 'projetos.html', 450)">
                         <span class="icon menu">
-                            <ion-icon name="code-outline" class="menu"></ion-icon>
+                            <ion-icon name="code" class="menu"></ion-icon>
                         </span>
                         <span class="text menu">Projetos</span>
                     </a>
                 </li>
                 <li class="list menu">
-                    <a href="contato.html" class="menu animate">
+                    <a href="contato.html" class="menu" onclick="atrasarLink(event, 'contato.html', 450)">
                         <span class="icon menu">
-                            <ion-icon name="chatbubble-outline" class="menu"></ion-icon>
-                            <!-- ! <ion-icon name="chatbubbles-outline"></ion-icon> -->
+                            <ion-icon name="chatbubbles" class="menu"></ion-icon>
                         </span>
                         <span class="text menu">Contato</span>
                     </a>
@@ -57,7 +52,38 @@
                 <div class="indicator menu"></div>
             </ul>
         </div>
+        <nav>
+            <ion-icon name="grid" class="burguer" onclick="clickMenu()"></ion-icon>
+        </nav>
     </header>
+    <div class="opcions" id="opcoes">
+        <ul class="menumobile">
+            <li class="mobile bordas active">
+                <a href="#" class="amobile">
+                    <span class="icon-mobile">
+                        <ion-icon name="home" class="menu"></ion-icon>
+                    </span>
+                    <span class="text-mobile">Home</span>
+                </a>
+            </li>
+            <li class="mobile">
+                <a href="projetos.html" class="amobile">
+                    <span class="icon-mobile">
+                        <ion-icon name="code" class="menu"></ion-icon>
+                    </span>
+                    <span class="text-mobile">Projetos</span>
+                </a>
+            </li>
+            <li class="mobile bordas">
+                <a href="contato.html" class="amobile">
+                    <span class="icon-mobile">
+                        <ion-icon name="chatbubbles" class="menu"></ion-icon>
+                    </span>
+                    <span class="text-mobile">Contato</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     <main>
         <img src="img/me.png" alt="Luis Otavio" class="imgme">
         <h1>Olá! Eu me chamo Luis Otavio</h1>
@@ -84,6 +110,7 @@
                         <textarea name="assunto" id="assunto" rows="7"></textarea><br>
                         <input type="submit" value="Enviar" class="envio btnform">
                         <input type="reset" value="Limpar" class="limpar btnform">
+
                     </div>
                 </form>
             </article>
@@ -112,6 +139,26 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const icone = document.querySelector('.burguer');
+
+        icone.addEventListener("click", function () {
+            icone.classList.toggle("updown");
+        });
+
+        //---------------------------
+        //        Menu Mobile
+        //---------------------------
+
+        function clickMenu() {
+            if (opcoes.style.display == 'flex') {
+                opcoes.style.display = 'none';
+            } else {
+                opcoes.style.display = 'flex';
+            }   
+        }
+    </script>
 </body>
 
 </html>

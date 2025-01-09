@@ -1,6 +1,113 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 510px) {
+
+    .burguer {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        right: 30px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 900;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.4s ease;
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        transition: .4s ease-in-out;
+    }
+
+    .burguer:hover {
+        background-color: #6793EE;
+    }
+
+    .updown {
+        transform: rotate(180deg);
+    }
+
+    .opcions {
+        display: none;
+        justify-content: center;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+        width: 100%;
+        /* Garante que a altura da caixa ocupe a altura da tela */
+        background-color: #303030;
+    }
+
+    .active {
+        background-color: #4961DC;
+    }
+
+    .menumobile {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        transition: .4s;
+    }
+
+    .mobile .amobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile:hover {
+        background-color: #4961DC;
+    }
+
+    .bordas {
+        border: #000 1px solid;
+    }
+
+
+    .amobile {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        gap: 10px;
+        padding: 10px 20px;
+        /* Espaçamento interno do link */
+    }
+
+    .icon-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ion-icon {
+        font-size: 24px;
+        color: #ffffff;
+    }
+
+    .text-mobile {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+
+
     footer {
         display: none;
     }
@@ -14,8 +121,8 @@
         margin: 12px;
     }
 
-    .navigation {
-        width: 215px;
+    div.navigation {
+        display: none;
     }
 
     input {
