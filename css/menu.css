@@ -16,9 +16,9 @@
 .text {font-family: 'Poppins', sans-serif;}
 
 .navigation {
-    position: relative;
-    top: 10px;
-    left: 28px;
+    position: absolute;
+    top: 43px;
+    right: 5px;
     width: 270px;
     height: 70px;
     background: #191919;

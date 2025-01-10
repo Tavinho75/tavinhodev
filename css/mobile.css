@@ -27,17 +27,14 @@
     }
 
     .updown {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
 
     .opcions {
         display: none;
         justify-content: center;
-        /* Centraliza os itens horizontalmente */
         align-items: center;
-        /* Centraliza os itens verticalmente */
         width: 100%;
-        /* Garante que a altura da caixa ocupe a altura da tela */
         background-color: #303030;
     }
 
@@ -125,75 +122,7 @@
         display: none;
     }
 
-    input {
-        background-color: rgb(255, 255, 255);
-        color: black;
-        width: 80%;
-    }
-
-    .label {
-        font-size: 18px;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-        margin-bottom: 10px;
-    }
-
-    input[type="text"]:not(:placeholder-shown),
-    input[type="email"]:not(:placeholder-shown),
-    textarea:not(:placeholder-shown) {
-        background-color: #ffffff;
-        /* Cor de fundo quando o campo tem texto */
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
-        border: 2px solid #4961DC;
-    }
-
-    form {
-        margin-top: 0px;
-    }
-
-    .envio {
-        margin-top: 10px;
-        background-color: #303030;
-        color: white;
-        border: 2px solid #4962dc39;
-        transition: .4s;
-        padding: 10px 0px;
-    }
-
-    .limpar {
-        margin-top: 5px;
-        background-color: #303030;
-        color: white;
-        border: 2px solid #002aff;
-        transition: .4s background-color border ease-in-out;
-        padding: 10px 0px;
-    }
-
-    .envio:hover {
-        background-color: #4961DC;
-        border: 2px solid #ffffff52;
-    }
-
-    .limpar:hover {
-        background-color: #4961DC;
-        border: 2px solid #ffffff52;
-    }
-
-    textarea {
-        width: 83%;
-        /* Para ocupar toda a largura do contêiner */
-        height: auto;
-        /* Ajusta a altura de acordo com o conteúdo */
-        resize: vertical;
-        /* Permite redimensionar verticalmente */
-        background-color: white;
-    }
+    
 
     #close {
         display: none;

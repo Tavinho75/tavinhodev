@@ -1,0 +1,77 @@
+input {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 80%;
+}
+
+.label {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="email"] {
+    margin-bottom: 10px;
+}
+
+input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    background-color: #ffffff;
+    /* Cor de fundo quando o campo tem texto */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 2px solid #4961DC;
+}
+
+form {
+    margin-top: 0px;
+}
+
+.envio {
+    width: 50px;
+    margin-top: 10px;
+    background-color: #303030;
+    color: white;
+    border: 2px solid #4962dc39;
+    transition: .4s;
+    padding: 10px 0px;
+}
+
+.limpar {
+    width: 50px;
+    margin-top: 5px;
+    background-color: #303030;
+    color: white;
+    border: 2px solid #002aff;
+    transition: .4s background-color border ease-in-out;
+    padding: 10px 0px;
+}
+
+.envio:hover {
+    background-color: #4961DC;
+    border: 2px solid #ffffff52;
+}
+
+.limpar:hover {
+    background-color: #4961DC;
+    border: 2px solid #ffffff52;
+}
+
+textarea {
+    width: 81%;
+    /* Para ocupar toda a largura do contêiner */
+    height: auto;
+    /* Ajusta a altura de acordo com o conteúdo */
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+    background-color: white;
+}
+
+@media screen and (max-width: 510px) {
+    .envio, .limpar {
+        width: 45%;
+    }
+}
